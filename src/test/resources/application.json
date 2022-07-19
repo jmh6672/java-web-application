@@ -1,0 +1,49 @@
+{
+  "server": {
+    "port": 10000,
+    "hosts": [
+      {
+        "name": "localhost",
+        "root": "/time",
+        "mapping": {
+          "error": {
+            "403": "/403",
+            "404": "/404",
+            "500": "/500"
+          },
+          "path": {
+            "/time": "/time"
+          }
+        }
+      },
+      {
+        "name": "a.com",
+        "root": "/a",
+        "mapping": {
+          "error": {
+            "403": "/A403",
+            "404": "/A404",
+            "500": "/A500"
+          },
+          "path": {
+            "/Atime": "/time"
+          }
+        }
+      },
+      {
+        "name": "b.com",
+        "root": "/b",
+        "mapping": {
+          "error": {
+            "403": "/B403",
+            "404": "/B404",
+            "500": "/B500"
+          },
+          "path": {
+            "/Btime": "/time"
+          }
+        }
+      }
+    ]
+  }
+}
